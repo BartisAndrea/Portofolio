@@ -1,0 +1,106 @@
+/* Style for the modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Pronounced shadow */
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* Fade-in animation */
+}
+
+/* Style for the close button */
+.modal-content .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff6f61; /* Coral background */
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: #ff6f61 0.3s ease; /* Color transition */
+}
+
+/* Hover effect for the close button */
+.modal-content .close-btn:hover {
+    background: #ff4d4d; /* Red background on hover */
+}
+
+/* Style for the message text */
+.modal-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.5; /* Better line spacing */
+}
+
+/* Animation for fading in the modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styles for smaller screens (up to 800px) */
+@media (max-width: 800px) {
+    .modal-content {
+        padding: 20px;
+        max-width: 500px; /* Smaller size on medium screens */
+    }
+    .modal-content .close-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+        top: 10px;
+        right: 10px;
+    }
+    .modal-content p {
+        font-size: 1rem; /* Smaller font on medium screens */
+    }
+}
+
+/* Styles for very small screens (up to 480px) */
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 15px;
+        max-width: 90%; /* Ensure modal fits well on very small screens */
+    }
+    .modal-content .close-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 0.9rem;
+        top: 5px;
+        right: 5px;
+    }
+    .modal-content p {
+        font-size: 0.9rem; /* Smaller font on very small screens */
+    }
+}

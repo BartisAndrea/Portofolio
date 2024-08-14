@@ -1,0 +1,84 @@
+/* Styles for the root container */
+#root {
+  max-width: 1280px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2rem; /* Add padding around the container */
+  text-align: center; /* Center text inside the container */
+}
+
+/* Styles for the logo */
+.logo {
+  height: 6em; /* Set the height of the logo */
+  padding: 1.5em; /* Add padding around the logo */
+  will-change: filter; /* Optimize performance for filter changes */
+  transition: filter 300ms; /* Smooth transition for filter changes */
+}
+
+/* Hover effect for the logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Apply a drop shadow on hover */
+}
+
+/* Hover effect for React logo */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Apply a different drop shadow for React logo */
+}
+
+/* Keyframes for logo spinning animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate to 360 degrees */
+  }
+}
+
+/* Apply spinning animation to the second link's logo */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear; /* Infinite spinning animation */
+  }
+}
+
+/* Styles for card components */
+.card {
+  padding: 2em; /* Add padding inside the card */
+}
+
+/* Styles for the "read-the-docs" link */
+.read-the-docs {
+  color: #888; /* Set text color */
+}
+
+/* Media Queries for responsive design */
+
+/* Styles for screens up to 800px wide */
+@media(max-width: 800px) {
+  .logo {
+    height: 4em; /* Reduce logo height */
+  }
+
+  .card {
+    padding: 1em; /* Reduce card padding */
+  }
+
+  #root {
+    padding: 1rem; /* Reduce container padding */
+  }
+}
+
+/* Styles for screens up to 480px wide */
+@media(max-width: 480px) {
+  .logo {
+    height: 3em; /* Further reduce logo height */
+  }
+
+  .card {
+    padding: 0.5em; /* Further reduce card padding */
+  }
+
+  #root {
+    padding: 0.5rem; /* Further reduce container padding */
+  }
+}

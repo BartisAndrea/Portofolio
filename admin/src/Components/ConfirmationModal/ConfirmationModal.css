@@ -1,0 +1,94 @@
+/* Style for the modal background overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; /* Include padding in the total width and height */
+}
+
+/* Style for the close button in the modal */
+.modal-content .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff6f61; /* Coral background */
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: #ff6f61 0.3s ease; /* Transition for background color */
+}
+
+/* Hover effect for the close button */
+.modal-content .close-btn:hover {
+    background: #ff4d4d; /* Red background on hover */
+}
+
+/* Style for the message text in the modal */
+.modal-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    line-height: 1.5; /* Improved line spacing */
+}
+
+/* Styles for screens up to 800px wide */
+@media (max-width: 800px) {
+    .modal-content {
+        max-width: 400px; /* Smaller maximum width */
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    .modal-content .close-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem; /* Smaller button size */
+    }
+
+    .modal-content p {
+        font-size: 1rem; /* Smaller text size */
+    }
+}
+
+/* Styles for very small screens up to 480px wide */
+@media (max-width: 480px) {
+    .modal-content {
+        max-width: 100%; /* Full width for very small screens */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .modal-content .close-btn {
+        width: 20px;
+        height: 20px;
+        font-size: 0.9rem; /* Very small button size */
+    }
+
+    .modal-content p {
+        font-size: 0.9rem; /* Small text size */
+    }
+}

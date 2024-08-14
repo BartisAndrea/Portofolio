@@ -1,0 +1,81 @@
+/* Sidebar container */
+.sidebar {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    padding-top: 30px; /* Space at the top */
+    gap: 20px; /* Space between items */
+    width: 100%; /* Full width */
+    max-width: 250px; /* Maximum width */
+    height: 100vh; /* Full viewport height */
+    background: #ffdfec; /* Light pink background */
+    border-right: 2px solid #dcdcdc; /* Light gray border on the right */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Shadow on the right side */
+}
+
+/* Sidebar item style */
+.sidebar-item {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin: 0 20px; /* Horizontal margins */
+    padding: 10px 15px; /* Padding inside items */
+    border-radius: 8px; /* Rounded corners */
+    background: #ffffff; /* White background */
+    gap: 15px; /* Space between icon and text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+/* Hover effect for sidebar items */
+.sidebar-item:hover {
+    background: #e0e0e0; /* Light gray background on hover */
+    transform: scale(1.02); /* Slightly scale up */
+}
+
+/* Style for images in sidebar items */
+.sidebar-item img {
+    width: 24px; /* Fixed width */
+    height: 24px; /* Fixed height */
+    object-fit: cover; /* Crop image to fit */
+}
+
+/* Style for text in sidebar items */
+.sidebar-item p {
+    color: #333333; /* Dark text color */
+    font-weight: 600; /* Bold text */
+}
+
+/* Responsive styles for medium screens (up to 800px) */
+@media (max-width: 800px) {
+    .sidebar {
+        padding: 30px 0; /* Adjust padding */
+        flex-direction: row; /* Arrange items horizontally */
+        width: 100%; /* Full width */
+        max-width: none; /* Remove max-width */
+        height: auto; /* Auto height */
+        justify-content: center; /* Center items */
+        border-right: none; /* Remove right border */
+    }
+
+    .sidebar-item {
+        margin: 0 10px; /* Adjust horizontal margins */
+    }
+}
+
+/* Responsive styles for small screens (up to 480px) */
+@media (max-width: 480px) {
+    .sidebar {
+        padding-top: 20px; /* Adjust top padding */
+        gap: 10px; /* Adjust gap between items */
+    }
+
+    .sidebar-item {
+        padding: 5px 10px; /* Adjust padding */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .sidebar-item img {
+        width: 20px; /* Smaller image width */
+        height: 20px; /* Smaller image height */
+    }
+}

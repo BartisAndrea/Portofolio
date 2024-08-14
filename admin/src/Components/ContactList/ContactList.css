@@ -1,0 +1,180 @@
+/* Main container for the contact list */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c0fe); /* Colorful gradient background */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the container */
+.contact-list:hover {
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); /* Slightly enlarged on hover */
+}
+
+/* Style for the contact list title */
+.contact-list h1 {
+    margin-bottom: 25px;
+    color: #333333;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center; /* Centered for a more uniform look */
+}
+
+/* Style for the contact list table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for the table header */
+thead th {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+/* Style for table cells */
+td, th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Style for the contact button */
+.contact-list-contact-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    color: #ffffff; /* White text */
+    background-color: #28a745; /* Green */
+}
+
+.contact-list-contact-button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* Style for the contacted button (when the contact has been contacted) */
+.contact-list-contacted-button {
+    background-color: #6c757d; /* Gray */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: not-allowed; /* Block cursor */
+    font-size: 14px;
+}
+
+.contact-list-contacted-button:hover {
+    background-color: #5a6268; /* Darker gray */
+}
+
+/* Style for the show message button */
+.contact-list-show-message {
+    background-color: #007bff; /* Blue */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the show message button */
+.contact-list-show-message:hover {
+    background-color: #0056b3; /* Darker blue */
+}
+
+/* Style for the hidden message */
+.contact-list-message {
+    display: none; /* Hide message by default */
+}
+
+.contact-list-message-visible {
+    display: block; /* Show message when active */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Styles for screens up to 800px wide */
+@media (max-width: 800px) {
+    .contact-list {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .contact-list h1 {
+        font-size: 24px;
+    }
+    table {
+        font-size: 12px;
+    }
+    td, th {
+        padding: 8px;
+    }
+    .contact-list-contact-button,
+    .contact-list-contacted-button,
+    .contact-list-show-message {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Styles for very small screens up to 480px wide */
+@media (max-width: 480px) {
+    .contact-list {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .contact-list h1 {
+        font-size: 20px;
+    }
+    table {
+        font-size: 10px;
+    }
+    td, th {
+        padding: 6px;
+    }
+    .contact-list-contact-button,
+    .contact-list-contacted-button,
+    .contact-list-show-message {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}
+
+/* Style for the delete button */
+.contact-list-delete-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    color: #ffffff; /* White text */
+    background-color: #dc3545; /* Red */
+}
+
+.contact-list-delete-button:hover {
+    background-color: #c82333; /* Darker red */
+}

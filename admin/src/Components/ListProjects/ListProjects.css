@@ -1,0 +1,266 @@
+/* Main container for the list of projects */
+.listprojects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c0fe); /* Colorful gradient background */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover effect for the container */
+.listprojects:hover {
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); /* Slightly enlarged on hover */
+}
+
+/* Style for the list title */
+.listprojects h1 {
+    margin-bottom: 25px;
+    color: #333333;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center; /* Centered for a more uniform look */
+}
+
+/* Container for search inputs */
+.listprojects-search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Search input styles */
+.listprojects-search {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    width: 300px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: #ffffff; /* White background for inputs */
+}
+
+/* Focus effect for search inputs */
+.listprojects-search:focus {
+    border-color: #6a1b9a; /* Purple border on focus */
+    outline: none;
+}
+
+/* Style for the table header of projects */
+.listprojects-format-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr 2fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #555555;
+    background-color: #ffffff; /* White background for header */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Style for each element in the project table header */
+.listprojects-format-main p {
+    margin: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Container for the listed projects */
+.listprojects-allprojects {
+    width: 100%;
+}
+
+/* Style for each project element */
+.listprojects-format {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr 2fr 1fr 1fr;
+    gap: 15px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f5f5f5; /* Light gray background */
+    margin-bottom: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for project elements */
+.listprojects-format:hover {
+    background-color: #e9ecef; /* Lighter gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for project images */
+.listprojects-project-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for action buttons */
+.listprojects-action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style for edit and delete buttons */
+.listprojects-edit-button, 
+.listprojects-remove-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    color: #ffffff; /* White text */
+}
+
+/* Edit button */
+.listprojects-edit-button {
+    background-color: #6a1b9a; /* Purple */
+}
+
+.listprojects-edit-button:hover {
+    background-color: #4a148c; /* Darker purple */
+}
+
+/* Delete button */
+.listprojects-remove-button {
+    background-color: #dc3545; /* Red */
+}
+
+.listprojects-remove-button:hover {
+    background-color: #c82333; /* Darker red */
+}
+
+/* Style for edit mode */
+.listprojects-edit-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style for input fields, selects, and textareas in edit mode */
+.listprojects-edit-mode input,
+.listprojects-edit-mode textarea,
+.listprojects-edit-mode select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: #ffffff; /* White background for fields */
+}
+
+/* Focus effect for edit mode fields */
+.listprojects-edit-mode input:focus,
+.listprojects-edit-mode textarea:focus,
+.listprojects-edit-mode select:focus {
+    border-color: #6a1b9a; /* Purple border on focus */
+    outline: none;
+}
+
+/* Style for actions in edit mode */
+.listprojects-edit-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* Style for buttons in edit actions */
+.listprojects-edit-actions button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+/* Save button */
+.listprojects-edit-actions button:first-of-type {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.listprojects-edit-actions button:first-of-type:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* Cancel button */
+.listprojects-edit-actions button:last-of-type {
+    background-color: #6c757d; /* Gray */
+    color: white;
+}
+
+.listprojects-edit-actions button:last-of-type:hover {
+    background-color: #5a6268; /* Darker gray */
+}
+
+/* Styles for smaller screens (up to 800px) */
+@media (max-width: 800px) {
+    .listprojects {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .listprojects h1 {
+        font-size: 24px;
+    }
+    .listprojects-search {
+        width: 250px;
+        font-size: 14px;
+    }
+    .listprojects-format-main,
+    .listprojects-format {
+        grid-template-columns: 1fr 2fr 2fr 2fr;
+    }
+    .listprojects-project-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .listprojects-edit-button,
+    .listprojects-remove-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Styles for very small screens (up to 480px) */
+@media (max-width: 480px) {
+    .listprojects {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .listprojects h1 {
+        font-size: 20px;
+    }
+    .listprojects-search {
+        width: 200px;
+        font-size: 12px;
+    }
+    .listprojects-format-main,
+    .listprojects-format {
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+    .listprojects-project-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .listprojects-edit-button,
+    .listprojects-remove-button {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}

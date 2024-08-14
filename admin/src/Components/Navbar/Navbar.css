@@ -1,0 +1,41 @@
+/* Navbar Container */
+.navbar {
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 15px 60px; /* Padding around the navbar */
+    background: linear-gradient(135deg, #6a1b9a, #ab47bc); /* Gradient background with purple and violet */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    margin-bottom: 1px; /* Margin at the bottom to separate from content below */
+}
+
+/* Navbar Logo */
+.nav-logo {
+    width: 70px; /* Set width for the logo */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+/* Navbar Profile Picture */
+.nav-profile {
+    width: 35px; /* Set width for the profile picture */
+    border-radius: 50%; /* Make the profile picture circular */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+/* Hover effect for logo and profile picture */
+.nav-logo:hover, .nav-profile:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Styles for screens smaller than 800px */
+@media (max-width: 800px) {
+    .navbar {
+        padding: 15px 30px; /* Adjust padding for smaller screens */
+    }
+    .nav-logo {
+        width: 50px; /* Reduce width of the logo */
+    }
+    .nav-profile {
+        width: 30px; /* Reduce width of the profile picture */
+    }
+}

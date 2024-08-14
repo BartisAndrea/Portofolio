@@ -1,0 +1,91 @@
+/* Style for the modal background overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Style for the modal container */
+.modal-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 500px; /* Maximum width for the modal */
+    box-sizing: border-box; /* Ensures padding does not exceed the width */
+}
+
+/* Style for the actions section within the modal */
+.modal-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Style for the confirmation and cancel buttons */
+.modal-confirm-button,
+.modal-cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* Standard text size */
+}
+
+.modal-confirm-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.modal-cancel-button {
+    background-color: #6c757d; /* Gray */
+    color: white;
+}
+
+.modal-confirm-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.modal-cancel-button:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Styles for screens up to 800px wide */
+@media (max-width: 800px) {
+    .modal-container {
+        width: 95%; /* Wider width for smaller screens */
+        max-width: 400px; /* Reduced maximum width */
+        padding: 15px;
+    }
+
+    .modal-confirm-button,
+    .modal-cancel-button {
+        padding: 8px 16px; /* Smaller button sizes */
+        font-size: 14px; /* Smaller text size */
+    }
+}
+
+/* Styles for very small screens up to 480px wide */
+@media (max-width: 480px) {
+    .modal-container {
+        width: 100%; /* Full width for very small screens */
+        max-width: none; /* Removes maximum width */
+        padding: 10px;
+    }
+
+    .modal-confirm-button,
+    .modal-cancel-button {
+        padding: 6px 12px; /* Smaller button sizes and font */
+        font-size: 12px; /* Small text size */
+    }
+}

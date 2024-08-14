@@ -1,0 +1,11 @@
+.admin {
+    display: flex; /* Sets the admin container to use flexbox layout */
+  }
+  
+  @media(max-width: 800px) {
+    /* When the screen width is 800px or smaller, change the layout */
+    .admin {
+      flex-direction: column;
+    }
+  }
+  
